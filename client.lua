@@ -3,6 +3,7 @@ AddEventHandler("taskUI:hideTaskUI", function()
     SendNUIMessage({
         key = "closeUI"
     })
+    SetNuiFocus(false, false)
 end)
 
 RegisterNetEvent("taskUI:newMessage")
@@ -12,6 +13,7 @@ AddEventHandler("taskUI:newMessage", function(title, message)
         title = title,
         text = message
     })
+    SetNuiFocus(false, false)
 end)
 
 RegisterNetEvent("taskUI:newTimedMessage")
@@ -23,4 +25,5 @@ AddEventHandler("taskUI:newTimedMessage", function(title, message, time)
         text = message,
         time = time
     })
+    SetNuiFocus(false, false)
 end)
